@@ -5,6 +5,7 @@ My first project made in the first year of learning programming and C++. It is s
 All code was changing during learning process and done without knowledge how to do such things in the right way, so the game is very buggy, laggy and messy. 
 
 No futher updates is planned so far.
+
 <img width="630" height="675" alt="VsDebugConsole_RQj0uSwtOT" src="https://github.com/user-attachments/assets/1ee6988e-6cdd-4f69-9567-02291df049e3" />
 
 
@@ -51,4 +52,5 @@ No futher updates is planned so far.
 
 ~while writing down into command line, templates showing up. (you can press *Enter* while typing to copy template into line)
 ~also spaces and brackets are unnecessary while typing command
+
 <img width="1221" height="693" alt="VsDebugConsole_BlREVpTICI" src="https://github.com/user-attachments/assets/75785911-2b5f-4b19-815c-d757fb908752" />
