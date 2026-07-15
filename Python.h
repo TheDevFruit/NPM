@@ -237,13 +237,12 @@ void Fore(string color, string background) {
 	base_color = brush;
 }
 
-template<typename anytext>
-void ForePrint(anytext text, string color = bcolors.first, string background = bcolors.second) {
+void ForePrint(string text, string color = bcolors.first, string background = bcolors.second) {
 	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);
 	int brush = (16 * colors[background]) + colors[color];
 
 	SetConsoleTextAttribute(handle, brush);
-	cerr << text;
+	cout << text;
 	SetConsoleTextAttribute(handle, base_color);
 }
 
@@ -559,7 +558,7 @@ public:
 		this->color = color;
 		this->back_color = back_color;
 	}
-	void SetFrame(vector<char> corns, vector<char> sides) {
+	void SetFrame(vector<string> corns, vector<string> sides) {
 		frame.corners = corns;
 		frame.side_vertical = sides[0];
 		frame.side_horizontal = sides[1];
@@ -632,9 +631,9 @@ private:
 	bool numeric = false;
 	class Frame {
 	public:
-		vector<char> corners;
-		char side_horizontal;
-		char side_vertical;
+		vector<string> corners;
+		string side_horizontal;
+		string side_vertical;
 		string color = "LIGHT RED";
 		string back_color = "BLACK";
 	};
@@ -643,14 +642,10 @@ private:
 	string back_color;
 
 	void FrameInit() {
-		frame.corners = { corn1, corn2, corn3, corn4 };
-		frame.side_horizontal = 205;
-		frame.side_vertical = 186;
+		frame.corners = { "╔", "╗", "╚", "╝" };
+		frame.side_horizontal = "═";
+		frame.side_vertical = "║";
 		frame.color = "LIGHT RED";
 		frame.back_color = "BLACK";
 	}
-	char corn1 = 201;
-	char corn2 = 187;
-	char corn3 = 200;
-	char corn4 = 188;
 };

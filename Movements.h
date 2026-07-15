@@ -226,8 +226,8 @@ void Space(Object obj, bool pause) {
     if (pause) obj.back_color = "LIGHT RED";
 
     if (obj.type == Wall) ForePrint(obj.icon, obj.color, obj.back_color);
-    else if (obj.type == Item) ForePrint(' ', "BLACK", obj.back_color);
-    else if (obj.type == Floor) ForePrint(' ', obj.color, obj.back_color);
+    else if (obj.type == Item) ForePrint(" ", "BLACK", obj.back_color);
+    else if (obj.type == Floor) ForePrint(" ", obj.color, obj.back_color);
 }
 
 void SpaceOut(int y, int x, bool pause) {

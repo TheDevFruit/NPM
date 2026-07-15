@@ -42,7 +42,7 @@ vector<string> commands;
 class Object {
 public:
     int id = 0;
-    char icon = 'X';
+    string icon = "X";
     string name = "error";
     string color = "BLUE";
     string back_color = "BLACK";
@@ -96,7 +96,7 @@ public:
     }
 private:
     map<string, int> ids{ {"plate", 0},       {"token", 1},     {"fruit", 2},     {"tabl", 3},     {"bush", 4},     {"phantwall", 5},     {"wall", 6},     {"torch", 7}, {"mycelium", 8}, {"mushroom", 9} };
-    map<string, char> icons{ {"plate", ' '}, { "token", 249 }, { "fruit", 15 }, { "tabl", 4 }, { "bush", 177 }, { "phantwall", 254 }, { "wall", 254 }, { "torch", 5 }, { "mycelium", ' ' }, { "mushroom", 15 } };
+    map<string, string> icons{ {"plate", " "}, {"token", "·"}, {"fruit", "☼"}, {"tabl", "♦"}, {"bush", "▒"}, {"phantwall", "█"}, {"wall", "█"}, {"torch", "♣"}, {"mycelium", " "}, {"mushroom", "♠"}};
     map<string, string> colors{ {"plate", "BLACK"}, { "token", "LIGHT YELLOW" }, { "fruit", "LIGHT RED" }, { "tabl", "WHITE" }, { "bush", "LIGHT CYAN" }, { "phantwall", "LIGHT RED" }, { "wall", "LIGHT BLUE" }, { "torch", "YELLOW" }, { "mycelium", "LIGHT MAGENTA" }, { "mushroom", "LIGHT YELLOW" } };
     map<string, string> back_colors{ {"plate", "BLACK"}, { "token", "BLACK" }, { "fruit", "BLACK" }, { "tabl", "BLACK" }, { "bush", "BLACK" }, { "phantwall", "LIGHT RED" }, { "wall", "LIGHT BLUE" }, { "torch", "BLACK" }, { "mycelium", "LIGHT MAGENTA" }, { "mushroom", "LIGHT MAGENTA" } };
 
@@ -121,7 +121,7 @@ private:
 class Entity {
 public:
     int id = 0;
-    char icon = 1;
+    string icon = "☺";
     string name = "noob";
     string color = "YELLOW";
     string back_color = "BLACK";
@@ -220,28 +220,28 @@ void BaseObjectsInit() {
 
 void BaseEntityInit() {
     player.id = 1;
-    player.icon = 1;
+    player.icon = "☺";
     player.name = "player";
     player.color = "YELLOW";
     player.speed = (Game.speed / 100) * 25;
     player.point = plate;
 
     crims.id = 2;
-    crims.icon = 2;
+    crims.icon = "☻";
     crims.name = "crims";
     crims.color = "RED";
     crims.speed = (Game.speed / 100) * 50;
     crims.point = plate;
 
     phantom.id = 3;
-    phantom.icon = 2;
+    phantom.icon = "☻";
     phantom.name = "phantom";
     phantom.color = "MAGENTA";
     phantom.speed = (Game.speed / 100) * 75;
     phantom.point = plate;
 
     moss.id = 4;
-    moss.icon = 2;
+    moss.icon = "☻";
     moss.name = "moss";
     moss.color = "GREEN";
     moss.speed = (Game.speed / 100) * 50;

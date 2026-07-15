@@ -246,6 +246,8 @@ void GamePlay() {
             if (Game.timer >= 1000000)
             {
                 Game.timer -= Round(Game.timer - (Game.timer / 2));
+                if (Event.night) Event.ToUnNight();
+                else Event.ToNight();
             }
         }
         if (!Event.pause and GameLife.active) Timer.life--;
@@ -278,6 +280,7 @@ void WorldInit() {
 }
 
 void main() {
+    SetConsoleOutputCP(CP_UTF8);
     WorldInit();
     GameInit();
 }
