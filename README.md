@@ -16,7 +16,7 @@ No futher updates is planned so far.
 - also using bigger font size is advised
 
 
-## Control
+## Controls
 - WASD - movement
 - Space - pause
 - e - command line (during pause)
@@ -51,6 +51,7 @@ No futher updates is planned so far.
 - mod_gamelife_(birth/life) - set birth and life rule for cell simulation
 
 ~while writing down into command line, templates showing up. (you can press *Enter* while typing to copy template into line)
+
 ~also spaces and brackets are unnecessary while typing command
 
 <img width="1221" height="693" alt="VsDebugConsole_BlREVpTICI" src="https://github.com/user-attachments/assets/75785911-2b5f-4b19-815c-d757fb908752" />
